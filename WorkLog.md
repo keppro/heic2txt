@@ -396,10 +396,11 @@ This development session successfully created a comprehensive HEIC to text conve
 2. **Advanced OCR Capabilities**: Multiple engines with optimization
 3. **GPU Acceleration**: Apple Silicon MPS support for faster processing
 4. **Parameter Optimization**: Grid search resulting in optimal settings
-5. **Robust Error Handling**: Comprehensive logging and error management
-6. **User-Friendly Interface**: CLI with multiple options and batch processing
-7. **Production Ready**: Complete test suite and documentation
-8. **Open Source**: Public GitHub repository for community use
+5. **Parametric Image Saving**: Optional saving of intermediate processing steps
+6. **Robust Error Handling**: Comprehensive logging and error management
+7. **User-Friendly Interface**: CLI with multiple options and batch processing
+8. **Production Ready**: Complete test suite and documentation
+9. **Open Source**: Public GitHub repository for community use
 
 The project is now ready for production use and further development by the community.
 
@@ -407,3 +408,41 @@ The project is now ready for production use and further development by the commu
 
 **End of Work Log**  
 *Generated on September 6, 2025*
+
+
+## Latest Updates
+
+### User Request: "Make this as a parametric option"
+**Request**: Make saving preprocessed and rotated images as a parametric option.
+
+**Actions Taken**:
+- Added `--save-images` command line argument to control image saving
+- Updated function signatures to accept `save_images` parameter:
+  - `preprocess_image_for_ocr(png_path, output_dir, save_images=False)`
+  - `extract_text_from_png(png_path, engine, language, auto_rotate, output_dir, save_images=False)`
+  - `process_heic_file(heic_path, output_dir, engine, language, auto_rotate, compare_engines, save_images=False)`
+- Added conditional logic to only save images when `--save-images` flag is used
+- Enhanced status display to show "💾 Save intermediate images: Enabled/Disabled"
+- Updated all function calls to pass the `save_images` parameter correctly
+
+**New Features**:
+- **Parametric Image Saving**: Users can choose whether to save intermediate images
+- **Status Display**: Clear indication of whether images will be saved
+- **File Naming**: Consistent naming convention for saved images:
+  - `{filename}_preprocessed.png` - Preprocessed image
+  - `{filename}_preprocessed_rotated_{angle}deg.png` - Rotated image
+
+**Usage Examples**:
+```bash
+# Process without saving intermediate images (default)
+python heic2txt_batch.py /path/to/images -o /output/dir --engine easyocr --language en
+
+# Process with saving intermediate images
+python heic2txt_batch.py /path/to/images -o /output/dir --engine easyocr --language en --save-images
+```
+
+**Files Modified**:
+- `heic2txt_batch.py` - Added parametric image saving functionality
+- `heic2txt.py` - Removed PaddleOCR references
+
+---
