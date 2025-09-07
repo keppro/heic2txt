@@ -18,7 +18,6 @@ from tqdm import tqdm
 from ocr_engines.tesseract_ocr import TesseractOCR
 from ocr_engines.easyocr_engine import EasyOCREngine
 from utils.image_utils import convert_heic_to_pil, is_heic_file
-from ocr_engines.paddle_ocr import PaddleOCREngine
 from utils.text_utils import preprocess_text, save_text_to_file
 
 

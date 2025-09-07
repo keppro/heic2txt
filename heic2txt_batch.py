@@ -49,7 +49,7 @@ def convert_heic_to_png(heic_path: str, png_path: str) -> bool:
         print(f"❌ sips conversion error: {e}")
         return False
 
-def preprocess_image_for_ocr(png_path: str) -> str:
+def preprocess_image_for_ocr(png_path: str, output_dir: str = None, save_images: bool = False) -> str:
     """
     Preprocess PNG image for better OCR results with color inversion and thresholding.
     
@@ -107,6 +107,11 @@ def preprocess_image_for_ocr(png_path: str) -> str:
         base_name = os.path.splitext(png_path)[0]
         preprocessed_path = f"{base_name}_preprocessed.png"
         processed_img.save(preprocessed_path)
+        # Also save to output directory if provided
+        if output_dir and save_images:
+            preprocessed_save_path = os.path.join(output_dir, f"{os.path.basename(base_name)}_preprocessed.png")
+            processed_img.save(preprocessed_save_path)
+            print(f"💾 Saved preprocessed image to output directory: {os.path.basename(preprocessed_save_path)}")
         
         print(f"✅ Image preprocessed and saved to {os.path.basename(preprocessed_path)}")
         return preprocessed_path
@@ -174,7 +179,7 @@ def detect_text_orientation(png_path: str, engine: str = 'easyocr', language: st
         print(f"⚠️  Orientation detection failed: {e}")
         return 0
 
-def extract_text_from_png(png_path: str, engine: str = 'easyocr', language: str = 'en', auto_rotate: bool = True) -> str:
+def extract_text_from_png(png_path: str, engine: str = 'easyocr', language: str = 'en', auto_rotate: bool = True, output_dir: str = None, save_images: bool = False) -> str:
     """
     Extract text from PNG file using OCR with optional auto-rotation.
     
@@ -204,6 +209,12 @@ def extract_text_from_png(png_path: str, engine: str = 'easyocr', language: str 
             if best_angle != 0:
                 print(f"🔄 Rotating image by {best_angle}° for better text recognition...")
                 img = img.rotate(-best_angle, expand=True)
+                # Save rotated image if output directory is provided
+                if output_dir and save_images:
+                    base_name = os.path.splitext(os.path.basename(png_path))[0]
+                    rotated_save_path = os.path.join(output_dir, f"{base_name}_rotated_{best_angle}deg.png")
+                    img.save(rotated_save_path)
+                    print(f"💾 Saved rotated image: {os.path.basename(rotated_save_path)}")
         
         # Extract text
         text = converter.ocr.extract_text(img)
@@ -369,7 +380,7 @@ def analyze_differences(results: dict) -> dict:
     
     return analysis
 
-def process_heic_file(heic_path: str, output_dir: str, engine: str = 'easyocr', language: str = 'en', auto_rotate: bool = True, compare_engines: bool = False) -> bool:
+def process_heic_file(heic_path: str, output_dir: str, engine: str = 'easyocr', language: str = 'en', auto_rotate: bool = True, compare_engines: bool = False, save_images: bool = False) -> bool:
     """
     Process a single HEIC file: convert to PNG, preprocess, extract text, save result.
     
@@ -396,7 +407,7 @@ def process_heic_file(heic_path: str, output_dir: str, engine: str = 'easyocr', 
         
         # Preprocess image for better OCR
         print(f"🔄 Preprocessing image for OCR...")
-        preprocessed_png_path = preprocess_image_for_ocr(png_path)
+        preprocessed_png_path = preprocess_image_for_ocr(png_path, output_dir, save_images)
         
         # Extract text from PNG
         if compare_engines:
@@ -427,7 +438,7 @@ def process_heic_file(heic_path: str, output_dir: str, engine: str = 'easyocr', 
                 used_engine = "none"
         else:
             print(f"📖 Extracting text with {engine}...")
-            text = extract_text_from_png(preprocessed_png_path, engine, language, auto_rotate)
+            text = extract_text_from_png(preprocessed_png_path, engine, language, auto_rotate, output_dir, save_images)
             used_engine = engine
         
         if not text.strip():
@@ -508,6 +519,7 @@ def main():
     parser.add_argument('-l', '--language', default='en', help='Language code for OCR')
     parser.add_argument('--no-rotate', action='store_true', help='Disable automatic text orientation detection')
     parser.add_argument('--compare', action='store_true', help='Compare all OCR engines and log differences')
+    parser.add_argument('--save-images', action='store_true', help='Save preprocessed and rotated images as PNG files')
     parser.add_argument('-v', '--verbose', action='store_true', help='Enable verbose output')
     
     args = parser.parse_args()
@@ -541,6 +553,7 @@ def main():
     print(f"🌐 Language: {args.language}")
     print(f"🔄 Auto-rotation: {'Enabled' if not args.no_rotate else 'Disabled'}")
     print(f"🖼️  Image preprocessing: Enabled")
+    print(f"💾 Save intermediate images: {"Enabled" if args.save_images else "Disabled"}")
     print(f"📊 Engine comparison: {'Enabled' if args.compare else 'Disabled'}")
     print("=" * 60)
     
@@ -551,7 +564,7 @@ def main():
     for i, heic_file in enumerate(heic_files, 1):
         print(f"\\n[{i}/{len(heic_files)}] Processing: {os.path.basename(heic_file)}")
         
-        if process_heic_file(heic_file, args.output, args.engine, args.language, not args.no_rotate, args.compare):
+        if process_heic_file(heic_file, args.output, args.engine, args.language, not args.no_rotate, args.compare, args.save_images):
             successful += 1
         else:
             failed += 1
