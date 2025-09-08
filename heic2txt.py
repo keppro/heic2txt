@@ -17,6 +17,7 @@ from tqdm import tqdm
 
 from ocr_engines.tesseract_ocr import TesseractOCR
 from ocr_engines.easyocr_engine import EasyOCREngine
+from ocr_engines.paddle_ocr import PaddleOCREngine
 from utils.image_utils import convert_heic_to_pil, is_heic_file
 from utils.text_utils import preprocess_text, save_text_to_file
 
@@ -44,6 +45,9 @@ class HEIC2TXT:
         if engine == "easyocr":
             self.ocr = EasyOCREngine(language=language)
         elif engine == "tesseract":
+            self.ocr = TesseractOCR(language=language)
+        elif engine == "paddleocr":
+            self.ocr = PaddleOCREngine(language=language)
             self.ocr = TesseractOCR(language=language)
         else:
             raise ValueError(f"Unsupported OCR engine: {engine}")
