@@ -1,30 +1,30 @@
 # Core OCR dependencies
-pytesseract==0.3.10
-Pillow==10.0.1
-opencv-python==4.8.1.78
+pytesseract>=0.3.10
+Pillow>=10.0.0
+opencv-python>=4.8.0
 
-# EasyOCR for alternative OCR engine
-easyocr==1.7.0
+# EasyOCR for OCR engine
+easyocr>=1.7.0
 
 # Image processing and conversion
-imageio==2.31.5
-imageio-ffmpeg==0.4.9
-pyheif==0.7.1
+imageio>=2.31.0
+imageio-ffmpeg>=0.4.9
+pyheif>=0.7.1
 
 # Command line interface
-click==8.1.7
-tqdm==4.66.1
+click>=8.1.0
+tqdm>=4.66.0
 
 # Text processing
-nltk==3.8.1
-regex==2023.10.3
+nltk>=3.8.0
+regex>=2023.10.0
 
 # Development and testing
-pytest==7.4.2
-pytest-cov==4.1.0
-black==23.9.1
-flake8==6.1.0
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.9.0
+flake8>=6.1.0
 
 # Logging and utilities
-structlog==23.1.0
-python-dotenv==1.0.0
+structlog>=23.1.0
+python-dotenv>=1.0.0

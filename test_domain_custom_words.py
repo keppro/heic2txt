@@ -174,7 +174,7 @@ if __name__ == "__main__":
     demonstrate_usage()
     
     # Test with existing image if available
-    test_image = "/Volumes/UserDisk/Users/keppro/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
+    test_image = "~/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
     
     if os.path.exists(test_image):
         test_domain_custom_words(test_image)

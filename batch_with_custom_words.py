@@ -158,8 +158,8 @@ def main():
     """Main function to run batch processing with custom words."""
     
     # Configuration
-    input_directory = "/Volumes/UserDisk/Users/keppro/Pictures/TF"
-    output_directory = "/Volumes/UserDisk/Users/keppro/Pictures/TF/custom_words_output"
+    input_directory = "~/Pictures/TF"
+    output_directory = "~/Pictures/TF/custom_words_output"
     
     # Get custom words for Terraform content
     custom_words = get_terraform_custom_words()

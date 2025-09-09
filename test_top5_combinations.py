@@ -160,8 +160,8 @@ def main():
     print("🧪 Testing Top 5 Custom Word Combinations")
     print("=" * 70)
     
-    input_dir = "/Volumes/UserDisk/Users/keppro/Pictures/TF"
-    base_output_dir = "/Volumes/UserDisk/Users/keppro/Pictures/TF/top5_test"
+    input_dir = "~/Pictures/TF"
+    base_output_dir = "~/Pictures/TF/top5_test"
     
     # Check if input directory exists
     if not os.path.exists(input_dir):

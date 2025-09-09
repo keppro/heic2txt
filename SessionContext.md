@@ -5,7 +5,7 @@ This is an advanced OCR (Optical Character Recognition) project that converts HE
 
 ## Current Project Structure
 ```
-/Volumes/UserDisk/Users/keppro/GitHub/heic2txt/
+~/GitHub/heic2txt/
 ├── heic2txt.py                      # Main CLI script
 ├── heic2txt_batch_custom.py         # Batch processing with custom words
 ├── ocr_engines/
@@ -152,19 +152,19 @@ This is an advanced OCR (Optical Character Recognition) project that converts HE
 ## File Locations
 
 ### Main Scripts
-- **Main OCR**: `/Volumes/UserDisk/Users/keppro/GitHub/heic2txt/heic2txt.py`
-- **Batch Processing**: `/Volumes/UserDisk/Users/keppro/GitHub/heic2txt/heic2txt_batch_custom.py`
-- **Custom Words**: `/Volumes/UserDisk/Users/keppro/GitHub/heic2txt/domain_specific_custom_words.py`
+- **Main OCR**: `~/GitHub/heic2txt/heic2txt.py`
+- **Batch Processing**: `~/GitHub/heic2txt/heic2txt_batch_custom.py`
+- **Custom Words**: `~/GitHub/heic2txt/domain_specific_custom_words.py`
 
 ### Test Images
-- **Primary test image**: `/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.HEIC`
-- **Ground truth**: `/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.txt`
-- **Test directory**: `/Volumes/UserDisk/Users/keppro/Pictures/TF/`
+- **Primary test image**: `~/Pictures/TF/IMG_7518.HEIC`
+- **Ground truth**: `~/Pictures/TF/IMG_7518.txt`
+- **Test directory**: `~/Pictures/TF/`
 
 ### Output Directories
-- **Working Directory**: `/Volumes/UserDisk/Users/keppro/GitHub/heic2txt`
-- **Main scripts**: `/Volumes/UserDisk/Users/keppro/GitHub/heic2txt/`
-- **Test images**: `/Volumes/UserDisk/Users/keppro/Pictures/TF/`
+- **Working Directory**: `~/GitHub/heic2txt`
+- **Main scripts**: `~/GitHub/heic2txt/`
+- **Test images**: `~/Pictures/TF/`
 
 ## Environment Configuration
 

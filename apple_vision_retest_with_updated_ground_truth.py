@@ -165,8 +165,8 @@ def main():
     print("=" * 70)
     
     # Test configuration
-    heic_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.HEIC"
-    ground_truth_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518_updated_easyocr.txt"
+    heic_path = "~/Pictures/TF/IMG_7518.HEIC"
+    ground_truth_path = "~/Pictures/TF/IMG_7518_updated_easyocr.txt"
     language = "en"
     
     print(f"Test image: {heic_path}")
@@ -290,7 +290,7 @@ def main():
     
     # Comparison with original ground truth
     print(f"\n📊 COMPARISON WITH ORIGINAL GROUND TRUTH:")
-    original_ground_truth_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.txt"
+    original_ground_truth_path = "~/Pictures/TF/IMG_7518.txt"
     original_ground_truth = load_ground_truth(original_ground_truth_path)
     
     if original_ground_truth:

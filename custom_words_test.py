@@ -18,7 +18,7 @@ def test_custom_words_improvement():
     """Test how custom words improve OCR recognition."""
     
     # Sample image from TF directory
-    image_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.HEIC"
+    image_path = "~/Pictures/TF/IMG_7518.HEIC"
     
     if not os.path.exists(image_path):
         print(f"❌ Image not found: {image_path}")

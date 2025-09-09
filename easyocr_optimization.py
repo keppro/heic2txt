@@ -325,7 +325,7 @@ def run_parameter_optimization(test_dir: str, output_dir: str,
 
 if __name__ == "__main__":
     # Configuration
-    test_directory = "/Volumes/UserDisk/Users/keppro/Pictures/TF"
+    test_directory = "~/Pictures/TF"
     output_directory = "./optimization_results"
     max_test_files = 5  # Start with 5 files for initial testing
     

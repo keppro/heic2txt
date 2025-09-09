@@ -225,7 +225,7 @@ def main():
     """Main function to run the Terraform + Ansible test."""
     
     # Test with existing image
-    test_image = "/Volumes/UserDisk/Users/keppro/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
+    test_image = "~/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
     
     if os.path.exists(test_image):
         results = test_terraform_ansible_combinations(test_image)

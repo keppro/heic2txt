@@ -13,7 +13,7 @@ def test_custom_words():
     """Test custom words with a simple example."""
     
     # Use an existing PNG file from the batch processing
-    image_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
+    image_path = "~/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
     
     if not os.path.exists(image_path):
         print(f"❌ Image not found: {image_path}")

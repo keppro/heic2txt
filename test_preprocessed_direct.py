@@ -9,7 +9,7 @@ import numpy as np
 
 def test_preprocessed_image():
     # Load the preprocessed image
-    img_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518_preprocessed_debug.png"
+    img_path = "~/Pictures/TF/IMG_7518_preprocessed_debug.png"
     
     # Initialize EasyOCR
     reader = easyocr.Reader(['en'], gpu=True)

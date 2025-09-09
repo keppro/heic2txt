@@ -115,8 +115,8 @@ def run_comprehensive_test():
     """Run comprehensive PaddleOCR vs EasyOCR comparison test."""
     
     # Test configuration
-    test_image = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.HEIC"
-    ground_truth = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.txt"
+    test_image = "~/Pictures/TF/IMG_7518.HEIC"
+    ground_truth = "~/Pictures/TF/IMG_7518.txt"
     language = "en"
     
     print("🔬 PaddleOCR vs EasyOCR Comprehensive Test")

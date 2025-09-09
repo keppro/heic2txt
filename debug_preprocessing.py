@@ -46,7 +46,7 @@ def preprocess_image_for_ocr(image_path):
             print(f"Resized image shape: {cleaned.shape}")
         
         # Save preprocessed image for inspection
-        cv2.imwrite("/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518_preprocessed_debug.png", cleaned)
+        cv2.imwrite("~/Pictures/TF/IMG_7518_preprocessed_debug.png", cleaned)
         print("💾 Saved preprocessed image for inspection")
         
         return cleaned
@@ -55,7 +55,7 @@ def preprocess_image_for_ocr(image_path):
         return None
 
 def main():
-    png_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518_test.png"
+    png_path = "~/Pictures/TF/IMG_7518_test.png"
     
     print("🔍 Debugging preprocessing...")
     result = preprocess_image_for_ocr(png_path)

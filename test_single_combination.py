@@ -18,8 +18,8 @@ def test_single_combination():
     print("🧪 Testing Single Custom Word Combination")
     print("=" * 60)
     
-    input_dir = "/Volumes/UserDisk/Users/keppro/Pictures/TF"
-    output_dir = "/Volumes/UserDisk/Users/keppro/Pictures/TF/single_test"
+    input_dir = "~/Pictures/TF"
+    output_dir = "~/Pictures/TF/single_test"
     
     # Get custom words for Terraform + Ansible + PostgreSQL
     custom_words = get_domain_specific_words(['terraform', 'ansible', 'postgresql'])

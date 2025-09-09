@@ -51,7 +51,7 @@ def resize_image_if_needed(image_path: str, max_size: int = 4000) -> str:
         return image_path
 
 # Test with the actual image
-test_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518_test.png"
+test_path = "~/Pictures/TF/IMG_7518_test.png"
 if __name__ == "__main__":
     result = resize_image_if_needed(test_path, max_size=4000)
     print(f"Result: {result}")

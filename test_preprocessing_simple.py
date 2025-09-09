@@ -97,9 +97,9 @@ def extract_text_with_easyocr(image_path, preprocessed=False):
 
 def main():
     # Paths
-    png_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518_test.png"
-    ground_truth_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.txt"
-    output_dir = "/Volumes/UserDisk/Users/keppro/Pictures/TF"
+    png_path = "~/Pictures/TF/IMG_7518_test.png"
+    ground_truth_path = "~/Pictures/TF/IMG_7518.txt"
+    output_dir = "~/Pictures/TF"
     
     # Check if files exist
     if not os.path.exists(png_path):

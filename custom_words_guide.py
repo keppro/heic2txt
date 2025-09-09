@@ -211,7 +211,7 @@ def demonstrate_custom_words_usage():
     print()
     
     # Test with different custom word sets
-    test_image = "/Volumes/UserDisk/Users/keppro/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
+    test_image = "~/Pictures/TF/apple_vision_output/tmp_141i5ic_preprocessed_rotated_180deg.png"
     
     if os.path.exists(test_image):
         print("🧪 Testing different custom word sets:")

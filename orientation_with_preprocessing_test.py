@@ -165,8 +165,8 @@ def main():
     print("=" * 70)
     
     # Test configuration
-    heic_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.HEIC"
-    ground_truth_path = "/Volumes/UserDisk/Users/keppro/Pictures/TF/IMG_7518.txt"
+    heic_path = "~/Pictures/TF/IMG_7518.HEIC"
+    ground_truth_path = "~/Pictures/TF/IMG_7518.txt"
     language = "en"
     
     print(f"Test image: {heic_path}")
