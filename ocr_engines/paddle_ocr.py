@@ -45,8 +45,8 @@ class PaddleOCREngine:
             self.ocr = PaddleOCR(
                 use_angle_cls=True,
                 lang=lang_code,
-                use_gpu=use_gpu,
-                show_log=False
+                text_det_limit_side_len=4000,  # Set to our max size to prevent internal resizing
+                text_det_limit_type='max'      # Use max side length limit
             )
             
             if use_gpu:
@@ -59,19 +59,33 @@ class PaddleOCREngine:
     
     def _detect_gpu_availability(self) -> bool:
         """
-        Detect if GPU acceleration is available.
+        Detect if GPU acceleration is available for PaddlePaddle.
         
         Returns:
             True if GPU is available, False otherwise
         """
-        # Check for CUDA (NVIDIA GPUs)
-        if torch.cuda.is_available():
-            return True
+        try:
+            import paddle
+            # Check if PaddlePaddle is compiled with CUDA support
+            if paddle.is_compiled_with_cuda():
+                print("🚀 PaddlePaddle compiled with CUDA support")
+                return True
+            
+            # Check if PaddlePaddle supports MPS (Apple Silicon)
+            if hasattr(paddle, 'is_compiled_with_mps') and paddle.is_compiled_with_mps():
+                print("🚀 PaddlePaddle compiled with MPS support")
+                return True
+            
+            # Check available devices
+            available_devices = paddle.get_device()
+            if 'gpu' in available_devices.lower() or 'mps' in available_devices.lower():
+                print(f"🚀 GPU device available: {available_devices}")
+                return True
+                
+        except Exception as e:
+            print(f"⚠️  Error detecting GPU: {e}")
         
-        # Check for MPS (Apple Silicon GPUs)
-        if torch.backends.mps.is_available():
-            return True
-        
+        print("💻 PaddlePaddle is CPU-only (no GPU support available)")
         return False
     
     def _convert_language_code(self, language: str) -> str:

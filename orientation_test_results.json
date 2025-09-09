@@ -1,0 +1,152 @@
+[
+  {
+    "engine": "easyocr",
+    "orientation": "No rotation",
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 802,
+    "similarity": 0.0,
+    "init_time": 0.45717692375183105,
+    "extract_time": 4.248687744140625,
+    "total_time": 4.70616888999939,
+    "success": true,
+    "extracted_text": "terratorm/ modules\nHon\ncreate\n348/1348\nHhetner\nto\ncreate\nresource\nype\nvariable\naccess\n5g\nname\nescrit..."
+  },
+  {
+    "engine": "easyocr",
+    "orientation": "Rotated 90\u00b0 clockwise",
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 117,
+    "similarity": 2.9629629629629632,
+    "init_time": 0.2847309112548828,
+    "extract_time": 3.6992030143737793,
+    "total_time": 3.9849259853363037,
+    "success": true,
+    "extracted_text": "03\n3\n3\n8\n3\n8\n8\n2\n83\n3\n3\n8\n3\n8\n8\n9\n8\n3\n8\n8\n8\n8\n1\n6\n2\n6\n3\n3\n5\n8\n2\n8\n3\n3\n1\n0\n8\n8\n3\n8\n8\n5\n6\n3\n6\n6\n8\n3\n3\n..."
+  },
+  {
+    "engine": "easyocr",
+    "orientation": "Rotated 180\u00b0",
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 160,
+    "similarity": 10.112359550561797,
+    "init_time": 0.28824782371520996,
+    "extract_time": 3.9965202808380127,
+    "total_time": 4.285782814025879,
+    "success": true,
+    "extracted_text": "0105\nUnosa\nubtsse\n01\nsbe1\n01\n54jo1q\nJI)\n01\n(J\nJaaunu\n01\nJaqunu\n01/W0J\nbut\naq pinous\npatqeua\nanu\nJqun..."
+  },
+  {
+    "engine": "easyocr",
+    "orientation": "Rotated 270\u00b0 clockwise",
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 120,
+    "similarity": 2.898550724637681,
+    "init_time": 0.2991178035736084,
+    "extract_time": 3.721524953842163,
+    "total_time": 4.021036863327026,
+    "success": true,
+    "extracted_text": "2\n8\n0\n8\n2\n\"\n8\n9\n2\n3\n1\n8\n8\n8\n9\n3\n8\n1\n8\n2\n8\n8\n8\n2\n8\n8\n8\n4\n8\n9\n2\n2 8\n2\n6\n9\n8\n8\n8\n1\n39\n1\n5\n3\n8\n83\n8\nJi\n2..."
+  },
+  {
+    "engine": "easyocr",
+    "orientation": "Rotated 90\u00b0 counter-clockwise",
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 120,
+    "similarity": 2.898550724637681,
+    "init_time": 0.28834986686706543,
+    "extract_time": 3.6571781635284424,
+    "total_time": 3.946523904800415,
+    "success": true,
+    "extracted_text": "2\n8\n0\n8\n2\n\"\n8\n9\n2\n3\n1\n8\n8\n8\n9\n3\n8\n1\n8\n2\n8\n8\n8\n2\n8\n8\n8\n4\n8\n9\n2\n2 8\n2\n6\n9\n8\n8\n8\n1\n39\n1\n5\n3\n8\n83\n8\nJi\n2..."
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "No rotation",
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 0,
+    "similarity": 0.0,
+    "init_time": 0.0010919570922851562,
+    "extract_time": 0.8280019760131836,
+    "total_time": 0.8292279243469238,
+    "success": false,
+    "extracted_text": ""
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 90\u00b0 clockwise",
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 0,
+    "similarity": 0.0,
+    "init_time": 7.104873657226562e-05,
+    "extract_time": 0.6432561874389648,
+    "total_time": 0.6436340808868408,
+    "success": false,
+    "extracted_text": ""
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 180\u00b0",
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 512,
+    "similarity": 1.509433962264151,
+    "init_time": 8.511543273925781e-05,
+    "extract_time": 0.894646167755127,
+    "total_time": 0.8957769870758057,
+    "success": true,
+    "extracted_text": "wncther to create this resource or not?\nclault\nD8 ACCESS Secursty Grou\u00df Nan\n00 Security Grouo Namer\n..."
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 270\u00b0 clockwise",
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 360,
+    "similarity": 0.0,
+    "init_time": 6.198883056640625e-05,
+    "extract_time": 0.954704761505127,
+    "total_time": 0.9556999206542969,
+    "success": true,
+    "extracted_text": "arestre vacressog-Aces Secursty Group Nare*\n= string\n\u043aeaer \u0442\u0430 ps securty Groue Nee\nn aa ton vc le to..."
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 90\u00b0 counter-clockwise",
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 360,
+    "similarity": 0.0,
+    "init_time": 5.91278076171875e-05,
+    "extract_time": 0.7562601566314697,
+    "total_time": 0.7566938400268555,
+    "success": true,
+    "extracted_text": "arestre vacressog-Aces Secursty Group Nare*\n= string\n\u043aeaer \u0442\u0430 ps securty Groue Nee\nn aa ton vc le to..."
+  }
+]

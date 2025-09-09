@@ -1,0 +1,38 @@
+[
+  {
+    "engine": "easyocr",
+    "preprocessing": false,
+    "description": "EasyOCR without preprocessing",
+    "text_length": 877,
+    "similarity": 0.0,
+    "time": 4.913017988204956,
+    "success": true
+  },
+  {
+    "engine": "easyocr",
+    "preprocessing": true,
+    "description": "EasyOCR with preprocessing",
+    "text_length": 198,
+    "similarity": 11.11111111111111,
+    "time": 3.957885980606079,
+    "success": true
+  },
+  {
+    "engine": "apple_vision",
+    "preprocessing": false,
+    "description": "Apple Vision without preprocessing",
+    "text_length": 0,
+    "similarity": 0.0,
+    "time": 0.9348337650299072,
+    "success": false
+  },
+  {
+    "engine": "apple_vision",
+    "preprocessing": true,
+    "description": "Apple Vision with preprocessing",
+    "text_length": 187,
+    "similarity": 11.707317073170733,
+    "time": 0.6060028076171875,
+    "success": true
+  }
+]

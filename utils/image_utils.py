@@ -1,5 +1,7 @@
 """Image utility functions for HEIC2TXT."""
 
+import cv2
+import numpy as np
 import pyheif
 from PIL import Image
 from pathlib import Path
@@ -115,3 +117,58 @@ def get_image_info(file_path: str) -> Optional[dict]:
     except Exception as e:
         print(f"Error getting image info: {str(e)}")
         return None
+
+
+def preprocess_image_for_ocr(image_path: str, output_dir: str, save_images: bool = False) -> str:
+    """
+    Preprocess image for better OCR results.
+    
+    Args:
+        image_path: Path to input image
+        output_dir: Directory to save preprocessed image
+        save_images: Whether to save preprocessed images
+        
+    Returns:
+        Path to preprocessed image
+    """
+    try:
+        # Load image
+        image = cv2.imread(image_path)
+        if image is None:
+            return image_path
+        
+        # Convert to grayscale
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        
+        # Apply Gaussian blur to reduce noise
+        blurred = cv2.GaussianBlur(gray, (3, 3), 0)
+        
+        # Apply adaptive thresholding
+        thresh = cv2.adaptiveThreshold(
+            blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
+        )
+        
+        # Apply morphological operations to clean up the image
+        kernel = np.ones((1, 1), np.uint8)
+        cleaned = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
+        
+        # Invert colors if needed (white text on black background)
+        # This helps with OCR engines that expect dark text on light background
+        if np.mean(cleaned) < 127:  # If image is mostly dark
+            cleaned = cv2.bitwise_not(cleaned)
+        
+        # Save preprocessed image if requested
+        if save_images:
+            input_file = Path(image_path)
+            preprocessed_path = Path(output_dir) / f"{input_file.stem}_preprocessed.png"
+            cv2.imwrite(str(preprocessed_path), cleaned)
+            return str(preprocessed_path)
+        
+        # Save temporary preprocessed image
+        temp_path = image_path.replace('.png', '_preprocessed.png')
+        cv2.imwrite(temp_path, cleaned)
+        return temp_path
+        
+    except Exception as e:
+        print(f"Error preprocessing image: {str(e)}")
+        return image_path

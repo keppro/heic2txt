@@ -1,5 +1,6 @@
 """Text utility functions for HEIC2TXT."""
 
+import difflib
 import re
 from pathlib import Path
 from typing import Optional
@@ -150,6 +151,61 @@ def clean_text_for_ocr(text: str) -> str:
     text = re.sub(r'[^\w\s.,!?;:()-]', '', text)
     
     # Normalize whitespace
+    text = re.sub(r'\s+', ' ', text)
+    
+    # Remove leading/trailing whitespace
+    text = text.strip()
+    
+    return text
+
+
+def calculate_text_similarity(text1: str, text2: str) -> float:
+    """
+    Calculate similarity between two texts using multiple methods.
+    
+    Args:
+        text1: First text to compare
+        text2: Second text to compare
+        
+    Returns:
+        Similarity score as percentage (0-100)
+    """
+    if not text1 and not text2:
+        return 100.0
+    if not text1 or not text2:
+        return 0.0
+    
+    # Normalize texts for comparison
+    text1_norm = normalize_text_for_comparison(text1)
+    text2_norm = normalize_text_for_comparison(text2)
+    
+    if text1_norm == text2_norm:
+        return 100.0
+    
+    # Calculate similarity using difflib
+    similarity = difflib.SequenceMatcher(None, text1_norm, text2_norm).ratio()
+    
+    # Convert to percentage
+    return similarity * 100.0
+
+
+def normalize_text_for_comparison(text: str) -> str:
+    """
+    Normalize text for comparison by removing extra whitespace and converting to lowercase.
+    
+    Args:
+        text: Text to normalize
+        
+    Returns:
+        Normalized text
+    """
+    if not text:
+        return ""
+    
+    # Convert to lowercase
+    text = text.lower()
+    
+    # Remove extra whitespace
     text = re.sub(r'\s+', ' ', text)
     
     # Remove leading/trailing whitespace

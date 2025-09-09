@@ -1,0 +1,130 @@
+[
+  {
+    "engine": "apple_vision",
+    "orientation": "No rotation",
+    "preprocessing": false,
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 0,
+    "similarity": 0.0,
+    "init_time": 0.0011258125305175781,
+    "extract_time": 0.8374369144439697,
+    "total_time": 0.8386778831481934,
+    "success": false,
+    "extracted_text": ""
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "No rotation",
+    "preprocessing": true,
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 187,
+    "similarity": 10.200927357032457,
+    "init_time": 6.079673767089844e-05,
+    "extract_time": 0.48953700065612793,
+    "total_time": 0.6301419734954834,
+    "success": true,
+    "extracted_text": "sthar to create thess\nNEES EGUASY GREND NIT\nonhla din o at au o eoo eo ecauy dees\no stdl\nOE EOAUASY GIUD AIENED GO QUA\u00ae\nTaeott e g\nnopor w9u/ae207 22z00t2 cago.\nyig erP.rSat.\n191072/4: 41"
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 90\u00b0 clockwise",
+    "preprocessing": false,
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 0,
+    "similarity": 0.0,
+    "init_time": 6.699562072753906e-05,
+    "extract_time": 0.6098802089691162,
+    "total_time": 0.6100630760192871,
+    "success": false,
+    "extracted_text": ""
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 90\u00b0 clockwise",
+    "preprocessing": true,
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 148,
+    "similarity": 17.37051792828685,
+    "init_time": 6.413459777832031e-05,
+    "extract_time": 0.21152114868164062,
+    "total_time": 0.3408029079437256,
+    "success": true,
+    "extracted_text": "icther to create this resource or notrp\ncurisy Graup elarca Qas part\nTLBY GrOUp ALlONca to port\nto port e qunber\n1okohicheneollonetencose the daceno"
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 180\u00b0",
+    "preprocessing": false,
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 512,
+    "similarity": 0.7411982705373688,
+    "init_time": 5.793571472167969e-05,
+    "extract_time": 0.7533397674560547,
+    "total_time": 0.7542710304260254,
+    "success": true,
+    "extracted_text": "wncther to create this resource or not?\nclault\nD8 ACCESS Secursty Grou\u00df Nan\n00 Security Grouo Namer\n\u2022 string\nESSTPTYeR 1-wi\nescriptlo\" a string\nto to croste lo securaly Grovps\nPorm vocmulo onop citoro..."
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 180\u00b0",
+    "preprocessing": true,
+    "image_size": [
+      3024,
+      4032
+    ],
+    "text_length": 115,
+    "similarity": 3.273322422258593,
+    "init_time": 6.008148193359375e-05,
+    "extract_time": 0.22817397117614746,
+    "total_time": 0.36975812911987305,
+    "success": true,
+    "extracted_text": "O/6ILND/CO#LCErS1Ord/ERockE/ras-surore/eRortoron\n\u0434 \u0441\u043e \u0441\u043a\u0441\u043e \u0432\u043b\u0430 \u0441\u043e\u0437\u0435\u043b\u043a\u043e \u043e\u043b \u043e\u0432\u0437\u0440\nSsauriay Gresp thao\u00ae\n\u041ce \u2022\"\n10913.944"
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 270\u00b0 clockwise",
+    "preprocessing": false,
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 360,
+    "similarity": 3.6809815950920246,
+    "init_time": 6.008148193359375e-05,
+    "extract_time": 0.7307178974151611,
+    "total_time": 0.7314841747283936,
+    "success": true,
+    "extracted_text": "arestre vacressog-Aces Secursty Group Nare*\n= string\n\u043aeaer \u0442\u0430 ps securty Groue Nee\nn aa ton vc le to creste D Securaty Groups-\nariaeraptlon obb s\u00e9cursty Group alloned tron pore\u2122\ndescription\nvarsorpral..."
+  },
+  {
+    "engine": "apple_vision",
+    "orientation": "Rotated 270\u00b0 clockwise",
+    "preprocessing": true,
+    "image_size": [
+      4032,
+      3024
+    ],
+    "text_length": 182,
+    "similarity": 17.53297129557797,
+    "init_time": 5.91278076171875e-05,
+    "extract_time": 0.19532394409179688,
+    "total_time": 0.3253490924835205,
+    "success": true,
+    "extracted_text": "ther to create this resource or notp\nSeaurdsy Group Mlaecf\nTang\naunbe\nTRBCoR CEE cRarcoo Gascecor tngressccxacreestens crcr tatropore\nRot3 e W\n2a o aoa \u0e52o\u0e59 \u0e53\u0e58 \u0e52x \u0e59l\u0e50v\u0e58 \u0e54 \u0e50x \u0e59\u0e51 \u0e58\u0e58\u0e55\n\u66c7\u00a9"
+  }
+]

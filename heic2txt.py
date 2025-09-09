@@ -18,6 +18,7 @@ from tqdm import tqdm
 from ocr_engines.tesseract_ocr import TesseractOCR
 from ocr_engines.easyocr_engine import EasyOCREngine
 from ocr_engines.paddle_ocr import PaddleOCREngine
+from ocr_engines.apple_vision_ocr import AppleVisionOCREngine
 from utils.image_utils import convert_heic_to_pil, is_heic_file
 from utils.text_utils import preprocess_text, save_text_to_file
 
@@ -26,20 +27,22 @@ class HEIC2TXT:
     """Main class for HEIC to text conversion."""
     
     def __init__(self, engine: str = "tesseract", language: str = "eng", 
-                 preprocess: bool = False, verbose: bool = False):
+                 preprocess: bool = False, verbose: bool = False, custom_words: List[str] = None):
         """
         Initialize the HEIC2TXT converter.
         
         Args:
-            engine: OCR engine to use ('tesseract' or 'easyocr')
+            engine: OCR engine to use ('tesseract', 'easyocr', 'paddleocr', or 'apple_vision')
             language: Language code for OCR
             preprocess: Whether to preprocess extracted text
             verbose: Enable verbose output
+            custom_words: List of custom words to improve recognition (Apple Vision only)
         """
         self.engine = engine
         self.language = language
         self.preprocess = preprocess
         self.verbose = verbose
+        self.custom_words = custom_words
         
         # Initialize OCR engine
         if engine == "easyocr":
@@ -48,7 +51,8 @@ class HEIC2TXT:
             self.ocr = TesseractOCR(language=language)
         elif engine == "paddleocr":
             self.ocr = PaddleOCREngine(language=language)
-            self.ocr = TesseractOCR(language=language)
+        elif engine == "apple_vision":
+            self.ocr = AppleVisionOCREngine(language=language, custom_words=custom_words)
         else:
             raise ValueError(f"Unsupported OCR engine: {engine}")
     

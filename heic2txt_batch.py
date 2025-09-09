@@ -563,7 +563,7 @@ def main():
     parser = argparse.ArgumentParser(description='HEIC2TXT Batch Processor with HEIC Conversion, Auto-Rotation, Image Preprocessing, and OCR Engine Comparison')
     parser.add_argument('input_paths', nargs='+', help='HEIC files or directories containing HEIC files')
     parser.add_argument('-o', '--output', required=True, help='Output directory for text files')
-    parser.add_argument('-e', '--engine', choices=['easyocr', 'tesseract', 'paddleocr'], default='easyocr', 
+    parser.add_argument('-e', '--engine', choices=['easyocr', 'tesseract', 'paddleocr', 'apple_vision'], default='easyocr', 
                        help='OCR engine to use')
     parser.add_argument('-l', '--language', default='en', help='Language code for OCR')
     parser.add_argument('--no-rotate', action='store_true', help='Disable automatic text orientation detection')
@@ -602,7 +602,7 @@ def main():
     print(f"🌐 Language: {args.language}")
     print(f"🔄 Auto-rotation: {'Enabled' if not args.no_rotate else 'Disabled'}")
     print(f"🖼️  Image preprocessing: Enabled")
-    print(f"💾 Save intermediate images: {"Enabled" if args.save_images else "Disabled"}")
+    print(f"💾 Save intermediate images: {'Enabled' if args.save_images else 'Disabled'}")
     print(f"📊 Engine comparison: {'Enabled' if args.compare else 'Disabled'}")
     print("=" * 60)
     

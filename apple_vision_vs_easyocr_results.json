@@ -1,0 +1,46 @@
+[
+  {
+    "engine": "easyocr",
+    "preprocessing": false,
+    "similarity": 2.905027932960894,
+    "init_time": 0.528331995010376,
+    "extraction_time": 5.186461925506592,
+    "total_time": 5.714793920516968,
+    "extracted_text": "Users\nmetri\nvarlable\ncreate\n348/1348\nto\ncreate\nresource\nnot?\ntype\nnumber\nvariable\naccess\nsg\nname\nescription\nDB\nAccess\nSecurity\nGroup\ntype\nvariable\nname\ndescridtion\nDB\nSecurity\nGroup\ntype\nstrind\nJd\"\ndescrlotion\nVPC\nt0\ncreate\nDB Security\nGroups\ntype\nstring\nvariable\nTrom\ndescrinton\nDB Security\nGroup\nallowed\nfrom port\"\ntyde\nnumber\ndefault\nvariable\nport\ndescription\n\"DB\nSecurity\nGroup\nallowed\nto\nport\"\ntve\nnumbem\ndefault\nnut\nvariable\nenabled\ntcp_ports\ndescriotion\nList\n01\ntcp ports\nWhich\nshould\nbe enabled\nfor\ntakes\nprecedent\nfrom/to\nport\ntype\nlist(ob\nect\nport\nnumder\nDort\nnumbe\ndefault\nvarlable\necurity\ngroups\"\nlist\n0f\nSecurity\nGroud\nID\nallow\naccess\nlist(strino\nault\nvariable\n\"allowed\nblocks\"\nst\nCIDR\nblocks\nWhich\nallowed\naccess\nthe database\"\nlist(string)\nvariable\ntags\ndescrip\non\nmapping\n0 (\nassign\nthe\nresource\ntype\nmap( string )\ndefault\nma\nSea\nO\nthis\nName\nName\nport'\ningr\nthis",
+    "text_length": 877,
+    "success": true
+  },
+  {
+    "engine": "easyocr",
+    "preprocessing": true,
+    "similarity": 9.836065573770492,
+    "init_time": 0.28939390182495117,
+    "extraction_time": 5.303161859512329,
+    "total_time": 5.59255576133728,
+    "extracted_text": "Userskcp\nTo\ntefri\ndit\nvaxiable\ncrcate\ntype\nnumber\ndefavlt\nescriptzon\ntype\n3 6tting\neScTipton\ntype\nstring\nype\n{C\ntype\n@ll\nde\ndefault\ntype\nto_port\ndescr-pton &\ndetaulc\npe\nletavlt\n2\n0\n3\n4\n4\n80\n2\n3\n#\n0\n<\n0\n2\n3\n3\nSea\nTt\naron\nGrom\n3",
+    "text_length": 226,
+    "success": true
+  },
+  {
+    "engine": "apple_vision",
+    "preprocessing": false,
+    "similarity": 0.0,
+    "init_time": 0.005014181137084961,
+    "extraction_time": 1.5137600898742676,
+    "total_time": 1.5187742710113525,
+    "extracted_text": "I",
+    "text_length": 1,
+    "success": true
+  },
+  {
+    "engine": "apple_vision",
+    "preprocessing": true,
+    "similarity": 14.285714285714285,
+    "init_time": 7.700920104980469e-05,
+    "extraction_time": 1.522392749786377,
+    "total_time": 1.5224697589874268,
+    "extracted_text": "Ilst(ob\n11",
+    "text_length": 10,
+    "success": true
+  }
+]

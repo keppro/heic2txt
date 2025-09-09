@@ -1,0 +1,50 @@
+[
+  {
+    "engine": "easyocr",
+    "preprocessing": false,
+    "similarity": 0.0,
+    "init_time": 0.0,
+    "extraction_time": 0.0,
+    "total_time": 0.0,
+    "extracted_text": "",
+    "text_length": 0,
+    "success": false,
+    "error": "f-string: expecting '}' (heic2txt_batch.py, line 605)"
+  },
+  {
+    "engine": "easyocr",
+    "preprocessing": true,
+    "similarity": 0.0,
+    "init_time": 0.0,
+    "extraction_time": 0.0,
+    "total_time": 0.0,
+    "extracted_text": "",
+    "text_length": 0,
+    "success": false,
+    "error": "f-string: expecting '}' (heic2txt_batch.py, line 605)"
+  },
+  {
+    "engine": "paddleocr",
+    "preprocessing": false,
+    "similarity": 0.0,
+    "init_time": 0.0,
+    "extraction_time": 0.0,
+    "total_time": 0.0,
+    "extracted_text": "",
+    "text_length": 0,
+    "success": false,
+    "error": "f-string: expecting '}' (heic2txt_batch.py, line 605)"
+  },
+  {
+    "engine": "paddleocr",
+    "preprocessing": true,
+    "similarity": 0.0,
+    "init_time": 0.0,
+    "extraction_time": 0.0,
+    "total_time": 0.0,
+    "extracted_text": "",
+    "text_length": 0,
+    "success": false,
+    "error": "f-string: expecting '}' (heic2txt_batch.py, line 605)"
+  }
+]
